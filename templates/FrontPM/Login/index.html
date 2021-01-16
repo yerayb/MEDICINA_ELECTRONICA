@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login PM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Login/css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='Login/js/main.js') }}"></script>
+
+    <link rel="manifest" href="{{ url_for('static', filename='Pwa/manifest.json') }}">
+
+    <!--BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<h1 style="font-size:3vw;">Medicina Electronica</h1>
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar Sesión</label>
+        <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Recuperar contraseña</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <div class="group">
+                    <label for="user" class="label">Usuario</label>
+                    <input id="userLogin" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">Contraseña</label>
+                    <input id="pass" type="password" class="input" data-type="password">
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" onclick="consulta_ajax()" value="Iniciar sesión">
+                </div>
+                <div class="hr"></div>
+            </div>
+            <div class="for-pwd-htm">
+                <div class="group">
+                    <label for="user" class="label">Usuario</label>
+                    <input id="user" type="text" class="input">
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" value="¿Has olvidado tu contraseña?">
+                </div>
+                <div class="hr"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <script src="{{ url_for('static', filename='Pwa/main.js') }}"></script>
+</div>
+
+</body>
+</html>
